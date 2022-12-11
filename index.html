@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course assignment</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+</head>
+
+<body>
+
+    
+    <script src=tabs.js></script>
+
+    <!-- Tabs-->
+    <!-- passing a second function named changeView(value) in each button to control the visibility of the chartContainer div -->
+    <div class="tab">
+        <button id="weather" class="tablinks" onclick="openTab(event, 'output'); changeView(1);";> Weather atm</button>
+        <button id="Temperature" class="tablinks" onclick="openTab(event, 'view2'); changeView(0); "> Temperature</button>
+        <button id="Humidity_inside" class="tablinks" onclick="openTab(event, 'View3'); changeView(0); "> Humidity Inside</button>
+        <button id="me" class="tablinks" onclick="openTab(event, 'Info'); changeView(1);"> Info</button>
+    </div>
+       <!--Div to contain chart function-->
+       <div id="chartContainer" >        
+        <canvas id="myChart"width="90" height="50"></canvas>
+            </div>   
+
+    <div id="output" class="tabcontent">
+        <script src=weather.js></script>
+    </div>
+
+            
+    <div id="view2" class="tabcontent">
+        <script src="temperature.js"> </script>
+    </div>
+    
+
+    <div id="View3" class="tabcontent">
+        <script src=humidity_in.js> </script>
+    </div>
+     
+ 
+    <div id="Info" class="tabcontent">
+        <h1>Info</h1>
+        <p>Creator: Johanna Huttunen</p>
+        <p>Email: johanna.huttunen@tuni.fi</p>
+        <p>Course: 5G00DM03-3005 Basics of Web Development</p>
+    </div>
+</body>
+
+
+</html>
